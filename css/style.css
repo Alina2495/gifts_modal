@@ -24,7 +24,7 @@ main {
     main {
         min-height: calc(100vh - 805.56px);
     }
-    #giftChooseModal .modal-dialog {
+    #quizModal .modal-dialog {
         width: 1200px;
     }
 }
@@ -1621,6 +1621,9 @@ form.mailing button {
     .footer_bottom>div.text-center {
         margin-bottom: 1em;
     }
+    #quizModal .product_btns {
+        opacity: 1;
+    }
 }
 
 footer.mobile {
@@ -1717,15 +1720,47 @@ footer.mobile {
 }
 
 
-/* gift choose modal styles */
+/* gift quiz modal styles */
 
-#giftChooseModal .categorie_sm {
+#quizModal .modal-dialog {
+    margin: 1.75rem auto;
+}
+
+#quizModal .quiz-steps {
+    background: url('../images/icons/quiz-line.svg') repeat-x center;
+}
+
+#quizModal .quiz-step {
+    background-color: #E5E5E5;
+    color: #323232;
+    border-radius: 50%;
+    vertical-align: bottom;
+    width: 2.5em;
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    margin-right: 20%;
+}
+
+#quizModal .quiz-step.active {
+    background-color: #DD4141;
+    color: white;
+}
+
+#quizModal .scroll-cards {
+    overflow-y: scroll;
+    max-height: 495px;
+}
+
+#quizModal .categorie_sm {
     position: relative;
     padding-top: 95%;
 }
 
-#giftChooseModal .categorie_sm img,
-#giftChooseModal input[type=radio] {
+#quizModal .categorie_sm img,
+#quizModal input[type=radio] {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1733,17 +1768,18 @@ footer.mobile {
     top: 0;
 }
 
-#giftChooseModal input[type=radio] {
+#quizModal input[type=radio] {
     opacity: 0;
     z-index: 1;
     cursor: pointer;
 }
 
-#giftChooseModal .categorie_sm .info {
+#quizModal .categorie_sm .info {
+    display: block !important;
     background-color: #E5E5E5;
 }
 
-#giftChooseModal input[type=radio]:checked+.info {
+#quizModal input[type=radio]:checked+.info {
     background-color: #DD4141;
     color: white;
 }

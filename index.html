@@ -771,7 +771,7 @@
                         <h3>Не знаете что подарить? Устали искать подарок?<br>Мы поможем!</h3>
                         <p class="gray mb-1">Если вы до сих пор не знаете, что подарить, то вам очень повезло. Мы всё уже нашли и придумали.</p>
                         <p class="gray">А вам осталось только ответить на несколько вопросов.</p>
-                        <button class="btn_main btn-1 ml-auto mr-0 mt-4" type="button" data-toggle="modal" data-target="#giftChooseModal">
+                        <button class="btn_main btn-1 ml-auto mr-0 mt-4" type="button" data-toggle="modal" data-target="#quizModal">
 							<span class="mr-2">Найти подарок</span>
 							<svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M0.591423 7.68961H20.4699L15.4477 2.4102L17.4257 0.33667L25.8429 9.1602L17.4257 17.9837L15.4477 15.9102L20.4699 10.6308H0.591423V7.68961Z" fill="white"/>
@@ -1491,137 +1491,520 @@
     </div>
 
     <!-- Подбор подарка -->
-    <div class="modal fade" id="giftChooseModal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+    <div class="modal fade" id="quizModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
             <div class="modal-content">
                 <div class="modal-body">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M23.6673 2.68325L21.3173 0.333252L12.0007 9.64992L2.68398 0.333252L0.333984 2.68325L9.65065 11.9999L0.333984 21.3166L2.68398 23.6666L12.0007 14.3499L21.3173 23.6666L23.6673 21.3166L14.3507 11.9999L23.6673 2.68325Z"/>
-            </svg>					
-        </button>
-                    <h3 class="text-center fw_5">Для кого выбираем подарок?</h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.6673 2.68325L21.3173 0.333252L12.0007 9.64992L2.68398 0.333252L0.333984 2.68325L9.65065 11.9999L0.333984 21.3166L2.68398 23.6666L12.0007 14.3499L21.3173 23.6666L23.6673 21.3166L14.3507 11.9999L23.6673 2.68325Z"/>
+                        </svg>					
+                    </button>
 
-                    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 gutters-1">
-                        <div class="col mb-4">
-                            <div class="categorie_sm">
-                                <img src="images/categories/gift-wrap.jpg" alt="">
-                                <input type="radio" name="giftChooseRadio">
-                                <div class="info">
-                                    <h4>Мужу</h4>
+                    <div class="tab-content" id="quizTabContent">
+                        <!-- step1 content -->
+                        <div class="tab-pane fade show active" id="step1" role="tabpanel" aria-labelledby="step1-tab">
+                            <!-- steps -->
+                            <div class="quiz-steps col-md-6 px-0 mx-auto d-flex justify-content-between mb-4">
+                                <div class="quiz-step active">1</div>
+                                <div class="quiz-step">2</div>
+                                <div class="quiz-step mr-0">3</div>
+                            </div>
+                            <h2 class="text-center fw_5 mb-4 mb-lg-5">Для кого выбираем подарок?</h2>
+                            <div class="scroll-cards row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc1.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Мужу</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc2.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Жене</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc3.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Другу</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc4.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Подруге</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc5.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Коллеге</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc6.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Маме</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc7.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Папе</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc8.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Сестре</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc9.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Брату</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc10.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Сестре</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc11.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Ребёнку</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc12.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Сестре</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc13.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Ребёнку</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc14.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Сестре</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc15.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Ребёнку</h4>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col mb-4">
-                            <div class="categorie_sm">
-                                <img src="images/categories/board-games.jpg" alt="">
-                                <input type="radio" name="giftChooseRadio">
-                                <div class="info">
-                                    <h4>Жене</h4>
-                                </div>
+                            <div class="d-flex justify-content-center f_09 position-sticky bottom-0 w-100 left-0 bg-white" id="quizTab" role="tablist">
+                                <a class="btn_main btn-1 px-5 fw_4 f_11" id="step2-tab" data-toggle="tab" href="#step2" role="tab" aria-controls="step2" aria-selected="false">Далее</a>
                             </div>
                         </div>
-                        <div class="col mb-4">
-                            <div class="categorie_sm">
-                                <img src="images/categories/gift-wrap.jpg" alt="">
-                                <input type="radio" name="giftChooseRadio">
-                                <div class="info">
-                                    <h4>Другу</h4>
+                        <!-- step2 content -->
+                        <div class="tab-pane fade" id="step2" role="tabpanel" aria-labelledby="step2-tab">
+                            <!-- steps -->
+                            <div class="quiz-steps col-md-6 px-0 mx-auto d-flex justify-content-between mb-4">
+                                <div class="quiz-step">1</div>
+                                <div class="quiz-step active">2</div>
+                                <div class="quiz-step mr-0">3</div>
+                            </div>
+                            <h2 class="text-center fw_5 mb-4 mb-lg-5">Какой повод для подарка?</h2>
+                            <div class="scroll-cards row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc16.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>День рождения</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc17.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Свадьба</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc18.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Годовщина</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc19.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Рождение ребёнка</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc20.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Крещение</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc21.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Новый год</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc22.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>День влюбленных</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc23.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>23 февраля</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc24.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>9 мая</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc25.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>8 марта</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc26.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Ребёнку</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc27.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>8 марта</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc28.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Ребёнку</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 mb-lg-4">
+                                    <div class="categorie_sm">
+                                        <img src="images/gift-choose/gc29.jpg" alt="">
+                                        <input type="radio" name="giftChooseRadio">
+                                        <div class="info">
+                                            <h4>Ребёнку</h4>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col mb-4">
-                            <div class="categorie_sm">
-                                <img src="images/categories/board-games.jpg" alt="">
-                                <input type="radio" name="giftChooseRadio">
-                                <div class="info">
-                                    <h4>Подруге</h4>
-                                </div>
+                            <div class="d-flex justify-content-center f_09 position-sticky bottom-0 w-100 left-0 bg-white" id="quizTab" role="tablist">
+                                <a class="btn_main btn-2 text-muted bg-transparent px-5 fw_4 f_11 mr-2 mr-lg-4" id="step1-tab" data-toggle="tab" href="#step1" role="tab" aria-controls="step1" aria-selected="false">Назад</a>
+                                <a class="btn_main btn-1 px-5 fw_4 f_11" id="step3-tab" data-toggle="tab" href="#step3" role="tab" aria-controls="step3" aria-selected="false">Далее</a>
                             </div>
                         </div>
-                        <div class="col mb-4">
-                            <div class="categorie_sm">
-                                <img src="images/categories/gift-wrap.jpg" alt="">
-                                <input type="radio" name="giftChooseRadio">
-                                <div class="info">
-                                    <h4>Коллеге</h4>
+                        <!-- step3 content -->
+                        <div class="tab-pane fade" id="step3" role="tabpanel" aria-labelledby="step3-tab">
+                            <!-- steps -->
+                            <div class="quiz-steps col-md-6 px-0 mx-auto d-flex justify-content-between mb-4">
+                                <div class="quiz-step">1</div>
+                                <div class="quiz-step">2</div>
+                                <div class="quiz-step active mr-0">3</div>
+                            </div>
+                            <h2 class="text-center fw_5 mb-4 mb-lg-5">Какой бюджет подарка?</h2>
+                            <div class="mx-auto col-md-6 params-group mb-4">
+                                <div class="row">
+                                    <div class="col-md-6 d-flex align-items-center mb-3">
+                                        <span class="gray mr-2 fw_5">От</span>
+                                        <input class="slider-range-inputs mr-2" type="number" id="min-price" oninput="$('#quiz-slider-range').slider('values', 0, this.value);">
+                                        <span>Р</span>
+                                    </div>
+                                    <div class="col-md-6 d-flex align-items-center mb-3">
+                                        <span class="gray mr-2 fw_5">До</span>
+                                        <input class="slider-range-inputs mr-2" type="number" id="max-price" oninput="$('#quiz-slider-range').slider('values', 1, this.value);">
+                                        <span>Р</span>
+                                    </div>
                                 </div>
+                                <p>
+                                    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                                </p>
+
+                                <div id="quiz-slider-range">
+                                    <div id="custom-handle" class="ui-slider-handle"></div>
+                                </div>
+
+                            </div>
+                            <div class="d-flex justify-content-center f_09 position-sticky bottom-0 w-100 left-0 bg-white" id="quizTab" role="tablist">
+                                <a class="btn_main btn-2 text-muted bg-transparent px-5 fw_4 f_11 mr-2 mr-lg-4" id="step2-tab" data-toggle="tab" href="#step2" role="tab" aria-controls="step2" aria-selected="false">Назад</a>
+                                <a class="btn_main btn-1 px-5 fw_4 f_11" id="step4-tab" data-toggle="tab" href="#step4" role="tab" aria-controls="step4" aria-selected="false">Далее</a>
                             </div>
                         </div>
-                        <div class="col mb-4">
-                            <div class="categorie_sm">
-                                <img src="images/categories/board-games.jpg" alt="">
-                                <input type="radio" name="giftChooseRadio">
-                                <div class="info">
-                                    <h4>Маме</h4>
+                        <!-- step4 content -->
+                        <div class="tab-pane fade" id="step4" role="tabpanel" aria-labelledby="step4-tab">
+                            <h2 class="text-center fw_5 mb-3">Готово!</h2>
+                            <p class="col-lg-6 mx-auto text-center text-muted mb-5">Мы смогли подобрать интересные варианты для того, чтобы сделать незабываемый подарок</p>
+                            <div class="row row-cols-2 row-cols-xl-4">
+                                <div class="col mb-4">
+                                    <div class="product">
+                                        <a href="#"><img src="images/products/2.jpg"></a>
+                                        <div class="marker">
+                                            <div class="marker-new">Новинка</div>
+                                        </div>
+                                        <div class="text">
+                                            <div class="price">
+                                                <span>80 ₽</span>
+                                                <div class="checkbox_compare d-block d-md-none ml-2 ml-xl-3">
+                                                    <input type="checkbox" name="compare" onchange="if(this.checked){$(this).parents('.product').addClass('product_compared')}else{$(this).parents('.product').removeClass('product_compared')}">
+                                                </div>
+                                            </div>
+                                            <div class="title"><a href="#">Термостакан со вставкой "Эспрессо Патронум", 350 мл</a></div>
+                                            <div class="product_btns">
+                                                <div class="toggle-form-addToCart">
+                                                    <div class="quantity-block">
+                                                        <button type="button" class="quantity-arrow-minus">
+                                                            <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M14 2.00024H0V0.000244141H14V2.00024Z"></path>
+                                                            </svg>
+                                                        </button>
+                                                        <input type="number" class="quantity-num" placeholder="0" value="1" min="1">
+                                                        <button type="button" class="quantity-arrow-plus">
+                                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13.0059 8H7.48585V14H5.64585V8H0.125854V6H5.64585V0H7.48585V6H13.0059V8Z"></path>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <button type="button" class="addToCart btn_main btn-1" onclick="$(this).prev('.quantity-block').css('margin-top', '0px'); $(this).parents('.product').addClass('product_added')">В корзину</button>
+                                                </div>
+                                                <div class="d-none d-md-block checkbox_compare ml-2 ml-xl-3">
+                                                    <input type="checkbox" name="compare" onchange="if(this.checked){$(this).parents('.product').addClass('product_compared')}else{$(this).parents('.product').removeClass('product_compared')}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-4">
+                                    <div class="product">
+                                        <a href="#"><img src="images/products/2.jpg"></a>
+                                        <div class="marker">
+                                            <div class="marker-new">Новинка</div>
+                                        </div>
+                                        <div class="text">
+                                            <div class="price">
+                                                <span>80 ₽</span>
+                                                <div class="checkbox_compare d-block d-md-none ml-2 ml-xl-3">
+                                                    <input type="checkbox" name="compare" onchange="if(this.checked){$(this).parents('.product').addClass('product_compared')}else{$(this).parents('.product').removeClass('product_compared')}">
+                                                </div>
+                                            </div>
+                                            <div class="title"><a href="#">Термостакан со вставкой "Эспрессо Патронум", 350 мл</a></div>
+                                            <div class="product_btns">
+                                                <div class="toggle-form-addToCart">
+                                                    <div class="quantity-block">
+                                                        <button type="button" class="quantity-arrow-minus">
+                                                            <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M14 2.00024H0V0.000244141H14V2.00024Z"></path>
+                                                            </svg>
+                                                        </button>
+                                                        <input type="number" class="quantity-num" placeholder="0" value="1" min="1">
+                                                        <button type="button" class="quantity-arrow-plus">
+                                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13.0059 8H7.48585V14H5.64585V8H0.125854V6H5.64585V0H7.48585V6H13.0059V8Z"></path>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <button type="button" class="addToCart btn_main btn-1" onclick="$(this).prev('.quantity-block').css('margin-top', '0px'); $(this).parents('.product').addClass('product_added')">В корзину</button>
+                                                </div>
+                                                <div class="d-none d-md-block checkbox_compare ml-2 ml-xl-3">
+                                                    <input type="checkbox" name="compare" onchange="if(this.checked){$(this).parents('.product').addClass('product_compared')}else{$(this).parents('.product').removeClass('product_compared')}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-4">
+                                    <div class="product">
+                                        <a href="#"><img src="images/products/2.jpg"></a>
+                                        <div class="marker">
+                                            <div class="marker-new">Новинка</div>
+                                        </div>
+                                        <div class="text">
+                                            <div class="price">
+                                                <span>80 ₽</span>
+                                                <div class="checkbox_compare d-block d-md-none ml-2 ml-xl-3">
+                                                    <input type="checkbox" name="compare" onchange="if(this.checked){$(this).parents('.product').addClass('product_compared')}else{$(this).parents('.product').removeClass('product_compared')}">
+                                                </div>
+                                            </div>
+                                            <div class="title"><a href="#">Термостакан со вставкой "Эспрессо Патронум", 350 мл</a></div>
+                                            <div class="product_btns">
+                                                <div class="toggle-form-addToCart">
+                                                    <div class="quantity-block">
+                                                        <button type="button" class="quantity-arrow-minus">
+                                                            <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M14 2.00024H0V0.000244141H14V2.00024Z"></path>
+                                                            </svg>
+                                                        </button>
+                                                        <input type="number" class="quantity-num" placeholder="0" value="1" min="1">
+                                                        <button type="button" class="quantity-arrow-plus">
+                                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13.0059 8H7.48585V14H5.64585V8H0.125854V6H5.64585V0H7.48585V6H13.0059V8Z"></path>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <button type="button" class="addToCart btn_main btn-1" onclick="$(this).prev('.quantity-block').css('margin-top', '0px'); $(this).parents('.product').addClass('product_added')">В корзину</button>
+                                                </div>
+                                                <div class="d-none d-md-block checkbox_compare ml-2 ml-xl-3">
+                                                    <input type="checkbox" name="compare" onchange="if(this.checked){$(this).parents('.product').addClass('product_compared')}else{$(this).parents('.product').removeClass('product_compared')}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-4">
+                                    <div class="product">
+                                        <a href="#"><img src="images/products/2.jpg"></a>
+                                        <div class="marker">
+                                            <div class="marker-new">Новинка</div>
+                                        </div>
+                                        <div class="text">
+                                            <div class="price">
+                                                <span>80 ₽</span>
+                                                <div class="checkbox_compare d-block d-md-none ml-2 ml-xl-3">
+                                                    <input type="checkbox" name="compare" onchange="if(this.checked){$(this).parents('.product').addClass('product_compared')}else{$(this).parents('.product').removeClass('product_compared')}">
+                                                </div>
+                                            </div>
+                                            <div class="title"><a href="#">Термостакан со вставкой "Эспрессо Патронум", 350 мл</a></div>
+                                            <div class="product_btns">
+                                                <div class="toggle-form-addToCart">
+                                                    <div class="quantity-block">
+                                                        <button type="button" class="quantity-arrow-minus">
+                                                            <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M14 2.00024H0V0.000244141H14V2.00024Z"></path>
+                                                            </svg>
+                                                        </button>
+                                                        <input type="number" class="quantity-num" placeholder="0" value="1" min="1">
+                                                        <button type="button" class="quantity-arrow-plus">
+                                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13.0059 8H7.48585V14H5.64585V8H0.125854V6H5.64585V0H7.48585V6H13.0059V8Z"></path>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <button type="button" class="addToCart btn_main btn-1" onclick="$(this).prev('.quantity-block').css('margin-top', '0px'); $(this).parents('.product').addClass('product_added')">В корзину</button>
+                                                </div>
+                                                <div class="d-none d-md-block checkbox_compare ml-2 ml-xl-3">
+                                                    <input type="checkbox" name="compare" onchange="if(this.checked){$(this).parents('.product').addClass('product_compared')}else{$(this).parents('.product').removeClass('product_compared')}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col mb-4">
-                            <div class="categorie_sm">
-                                <img src="images/categories/board-games.jpg" alt="">
-                                <input type="radio" name="giftChooseRadio">
-                                <div class="info">
-                                    <h4>Папе</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col mb-4">
-                            <div class="categorie_sm">
-                                <img src="images/categories/board-games.jpg" alt="">
-                                <input type="radio" name="giftChooseRadio">
-                                <div class="info">
-                                    <h4>Сестре</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col mb-4">
-                            <div class="categorie_sm">
-                                <img src="images/categories/board-games.jpg" alt="">
-                                <input type="radio" name="giftChooseRadio">
-                                <div class="info">
-                                    <h4>Брату</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col mb-4">
-                            <div class="categorie_sm">
-                                <img src="images/categories/board-games.jpg" alt="">
-                                <input type="radio" name="giftChooseRadio">
-                                <div class="info">
-                                    <h4>Сестре</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col mb-4">
-                            <div class="categorie_sm">
-                                <img src="images/categories/board-games.jpg" alt="">
-                                <input type="radio" name="giftChooseRadio">
-                                <div class="info">
-                                    <h4>Ребёнку</h4>
-                                </div>
+                            <div class="d-flex justify-content-center f_09 position-sticky bottom-0 w-100 left-0 bg-white" id="quizTab" role="tablist">
+                                <a class="btn_main btn-1 px-4 fw_4 f_11" id="step1-tab" data-toggle="tab" href="#step1" role="tab" aria-controls="step1" aria-selected="false">Попробовать еще раз</a>
                             </div>
                         </div>
                     </div>
-
-                    <form action="" class="f_09 mt-4">
-                        <div class="d-flex justify-content-center mt-3">
-                            <button type="submit" class="btn_main btn-1 px-5 fw_4 f_11">Далее</button>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Skripts -->
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+        <!-- Skripts -->
+        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+        <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
