@@ -125,32 +125,11 @@ $(document).ready(function() {
     $('#max-price').val($("#slider-range").slider("values", 1));
 });
 
-// quiz range
-$(function() {
-    var handle = $("#custom-handle");
-    $("#quiz-slider-range").slider({
-        create: function() {
-            handle.text($(this).slider("value"));
-        },
-        slide: function(event, ui) {
-            handle.text(ui.value);
-        }
-    });
-});
 
-$(function() {
-    $("#quiz-slider-range").slider({
-        range: true,
-        min: 0,
-        max: 500,
-        values: [75, 300],
-        slide: function(event, ui) {
-            $("#amount").val(ui.values[0] + "P" + ui.values[1] + " - P");
-        }
-    });
 
-    $("#amount").val("P" + $("#quiz-slider-range").slider("values", 0) +
-        " P" + $("#quiz-slider-range").slider("values", 1));
+// quiz modal turn off autoplay
+$("#quizCarousel").carousel({
+    interval: false
 });
 
 /* gifts set */

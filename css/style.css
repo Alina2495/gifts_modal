@@ -1724,6 +1724,8 @@ footer.mobile {
 
 #quizModal .modal-dialog {
     margin: 1.75rem auto;
+    height: calc(100vh - 3.5rem);
+    min-height: unset;
 }
 
 #quizModal .quiz-steps {
@@ -1750,7 +1752,7 @@ footer.mobile {
 }
 
 #quizModal .scroll-cards {
-    overflow-y: scroll;
+    overflow-y: auto;
     max-height: 495px;
 }
 
